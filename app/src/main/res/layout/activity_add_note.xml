@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".addNote"
-    android:padding="16dp">
+    android:padding="30dp">
 
     <TextView
         android:id="@+id/addNoteHeading"
@@ -28,19 +27,63 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        />
+
+    <EditText
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/addNoteHeading"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_border"
+        android:hint="Header"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"/>
 
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@id/addNoteHeading"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/header"
+        android:layout_marginTop="12dp"
         android:background="@drawable/blue_border"
-        android:hint="date"
-        android:inputType="date"
+        android:hint="Date"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"/>
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/editTextDate"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/blue_border"
+        android:hint="Time"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"/>
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/editTextTime"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="@font/poppins_semibold"
+        android:hint="Enter the Description"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="20sp"
+        android:gravity="top"
+        android:paddingTop="16dp"
+        />
+
 
 </RelativeLayout>
